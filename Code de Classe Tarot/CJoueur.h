@@ -1,0 +1,13 @@
+#pragma once
+#include <string>
+class CJoueur
+{
+private:
+	std::string nom;
+	int score;
+public:
+	CJoueur(std::string,int);
+	std::string ireNom();
+	int ireScore();
+	int majScore();
+};
