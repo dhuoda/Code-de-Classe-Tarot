@@ -11,4 +11,5 @@ public:
 	CPartie(CJoueur*[]);
 	void CreerDonnes(CJoueur *);
 	void SetPreneur(CJoueur *);
+	void SetContrat(Contrat);
 };

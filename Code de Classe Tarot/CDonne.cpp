@@ -25,6 +25,11 @@ void CDonne::SetDefenseur(CJoueur * Defenseurs[])
 	}
 }
 
+void CDonne::SetContrat(Contrat Contrats)
+{
+	typeContrat = Contrats;
+}
+
 CDonne::~CDonne()
 {
 

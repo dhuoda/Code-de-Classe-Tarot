@@ -36,3 +36,8 @@ void CPartie::SetPreneur(CJoueur * preneur)
 	// Appeler SetDefenseurs de la Donne
 	lesDonnes[NBDonnes - 1]->SetDefenseur(Defenseur);
 }
+
+void CPartie::SetContrat(Contrat Contrats)
+{
+	lesDonnes[NBDonnes - 1]->SetContrat(Contrats);
+}

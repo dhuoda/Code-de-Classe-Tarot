@@ -15,6 +15,7 @@ public:
 	CDonne(CJoueur *leDonneur);
 	void SetPreneur(CJoueur * Preneur);
 	void SetDefenseur(CJoueur * Defenseurs[]);
+	void SetContrat(Contrat Contrats);
 	~CDonne();
 
 private:
