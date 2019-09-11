@@ -18,4 +18,5 @@ private:
 public:
 	IHM();
 	~IHM();
+	void SaisirJoueurs();
 };
