@@ -17,7 +17,7 @@ void CDonne::SetPreneur(CJoueur * Preneur)
 	lePreneur = Preneur;
 }
 
-void CDonne::SetDefenseur(CJoueur * Defenseurs)
+void CDonne::SetDefenseur(CJoueur * Defenseurs[])
 {
 	for (int i = 0; i < 3; i++)
 	{

@@ -21,7 +21,7 @@ class CDonne
 public:
 	CDonne(CJoueur *leDonneur);
 	void SetPreneur(CJoueur * Preneur);
-	void SetDefenseur(CJoueur * Defenseurs);
+	void SetDefenseur(CJoueur * Defenseurs[]);
 	~CDonne();
 
 private:
@@ -35,5 +35,5 @@ private:
 	Chelem typeChelem;
 	CJoueur *leDonneur;
 	CJoueur *lePreneur;
-	CJoueur lesDefenseurs[3];
+	CJoueur *lesDefenseurs[3];
 };

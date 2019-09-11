@@ -1,7 +1,6 @@
 #include "CDonne.h"
 #include "CJoueur.h"
 #include "CPartie.h"
-#include "Ihm.h"
 #include <iostream>
 #include <stdio.h>
 #include <conio.h>
@@ -20,15 +19,18 @@ void  CPartie::CreerDonnes(CJoueur * donneur)
 	lesDonnes[NBDonnes-1]=new CDonne(donneur);
 }
 
-void CPartie::SetPreneur(CJoueur * preneur,CJoueur * Defenseur)
+void CPartie::SetPreneur(CJoueur * preneur)
 {
+	CJoueur * Defenseur[3];
+	int IDdef = 0;
 	lesDonnes[NBDonnes - 1]->SetPreneur(preneur);
 	for (int i = 0; i < 4; i++)
 	{
 		if (lesJoueurs[i] != preneur)
 		{
 			//enregistrer lesJoueurs[i] Dans le Tableau des Defenseurs
-			Defenseur = lesJoueurs[i];
+			Defenseur[IDdef] = lesJoueurs[i];
+			IDdef++;
 		}
 	}
 	// Appeler SetDefenseurs de la Donne

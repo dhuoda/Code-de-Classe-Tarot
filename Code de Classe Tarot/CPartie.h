@@ -10,6 +10,5 @@ private:
 public:
 	CPartie(CJoueur*[]);
 	void CreerDonnes(CJoueur *);
-	void SetPreneur(CJoueur *,CJoueur *);
-	void CPartie::SetPreneur(CJoueur *,CJoueur *);
+	void SetPreneur(CJoueur *);
 };

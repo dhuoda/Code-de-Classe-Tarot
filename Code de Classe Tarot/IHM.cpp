@@ -52,6 +52,14 @@ void IHM::SaisirLePreneur()
 	int NBPreneur;
 	cout << "Saisir le Preneur:\n";
 	cin >> NBPreneur;
-	lesJoueurs[NBPreneur];
+	laPartie->SetPreneur(lesJoueurs[NBPreneur]);
+}
+
+void IHM::SaisirContrat()
+{
+	int nomContrat;
+	cout << "0.Passe\n 1.Prise\n 2.Garde\n 3.Garde Sans\n 4.Garde Avec\n Saisir le numéro du contrat :\n";
+	cin >> nomContrat;
+	
 }
 

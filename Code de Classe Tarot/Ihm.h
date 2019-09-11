@@ -20,4 +20,5 @@ public:
 	void SaisirJoueurs();//Fonction de saisie des Joueurs
 	void CreerPartie();//Fonction de creation de la Partie
 	void SaisirLePreneur();//Fonction de Saisie du Preneur
+	void SaisirContrat();
 };
