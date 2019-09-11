@@ -5,11 +5,24 @@
 #include <iostream>
 #include <stdio.h>
 #include <conio.h>
-#using <System.dll>
+//#using <System.dll>
 
 CDonne::CDonne(CJoueur *leDonneur)
 {
 	this->leDonneur = leDonneur;
+}
+
+void CDonne::SetPreneur(CJoueur * Preneur)
+{
+	lePreneur = Preneur;
+}
+
+void CDonne::SetDefenseur(CJoueur * Defenseurs)
+{
+	for (int i = 0; i < 3; i++)
+	{
+		lesDefenseurs[i] = Defenseurs[i];
+	}
 }
 
 CDonne::~CDonne()

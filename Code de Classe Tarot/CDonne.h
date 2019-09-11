@@ -6,7 +6,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <conio.h>
-#using <System.dll>
+//#using <System.dll>
 
 enum Poignee { Sans, Simple, Double, Triple };
 
@@ -20,7 +20,8 @@ class CDonne
 {
 public:
 	CDonne(CJoueur *leDonneur);
-
+	void SetPreneur(CJoueur * Preneur);
+	void SetDefenseur(CJoueur * Defenseurs);
 	~CDonne();
 
 private:
@@ -34,5 +35,5 @@ private:
 	Chelem typeChelem;
 	CJoueur *leDonneur;
 	CJoueur *lePreneur;
-	CJoueur *lesDefenseurs[3];
+	CJoueur lesDefenseurs[3];
 };
