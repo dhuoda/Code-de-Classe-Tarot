@@ -12,7 +12,7 @@ class CDonne
 {
 public:
 	CDonne(CJoueur *leDonneur);
-
+	void CalculPoints();
 	~CDonne();
 
 private:

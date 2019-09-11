@@ -7,7 +7,8 @@ private:
 	int score;
 public:
 	CJoueur(std::string,int);
-	std::string ireNom();
-	int ireScore();
-	int majScore();
+	std::string lireNom();
+	int lireScore();
+	int majScore(int);
+
 };
