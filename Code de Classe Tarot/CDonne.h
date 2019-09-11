@@ -1,4 +1,5 @@
 #pragma once
+#include "CJoueur.h"
 
 enum Poignee { Sans, Simple, Double, Triple };
 
@@ -12,7 +13,9 @@ class CDonne
 {
 public:
 	CDonne(CJoueur *leDonneur);
-	void CalculPoints();
+	void SetPreneur(CJoueur * Preneur);
+	void SetDefenseur(CJoueur * Defenseurs[]);
+	void SetContrat(Contrat Contrats);
 	~CDonne();
 
 private:

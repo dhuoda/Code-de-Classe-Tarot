@@ -1,6 +1,12 @@
-#include <iostream>
-
+#include "CDonne.h"
 #include "CJoueur.h"
+#include "CPartie.h"
+#include "Ihm.h"
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+//#using <System.dll>
+
 CJoueur::CJoueur(std::string A, int B)
 {
 	nom = A ;
@@ -8,15 +14,17 @@ CJoueur::CJoueur(std::string A, int B)
 }
 std::string CJoueur::lireNom()
 {
-	return nom;
+	return(nom);
+
 }
 
 int CJoueur::lireScore()
 {
-	return score;
+	return(score);
 }
 
-int CJoueur::majScore(int nbPoints)
+int CJoueur::majScore(int points)
 {
-	score = score + nbPoints;
+	score = score + points;
+	return(score);
 }

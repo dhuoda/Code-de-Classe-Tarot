@@ -1,9 +1,7 @@
-#include <iostream>
+
 #include "Ihm.h"
-#include "CJoueur.h"
-
+#include <string>
 using namespace std;
-
 
 IHM::IHM()
 {
@@ -42,5 +40,32 @@ void IHM::SaisirJoueurs()
 	lesJoueurs[1] = new CJoueur(joueur2, 0);
 	lesJoueurs[2] = new CJoueur(joueur3, 0);
 	lesJoueurs[3] = new CJoueur(joueur4, 0);
+}
+
+void IHM::CreerPartie()
+{
+	laPartie = new CPartie(lesJoueurs);
+}
+
+void IHM::CreerDonnes(int numDonneur)
+{
+	laPartie->CreerDonnes(lesJoueurs[numDonneur - 1]);
+}
+
+void IHM::SaisirLePreneur()
+{
+	int NBPreneur;
+	cout << "Saisir le Preneur:\n";
+	cin >> NBPreneur;
+	laPartie->SetPreneur(lesJoueurs[NBPreneur]);
+}
+
+void IHM::SaisirContrat()
+{
+	int nomContrat;
+	cout << "0.Passe\n 1.Prise\n 2.Garde\n 3.Garde Sans\n 4.Garde Avec\n Saisir le numéro du contrat :\n";
+	cin >> nomContrat;
+	laPartie->SetContrat((Contrat)nomContrat);
+	
 }
 

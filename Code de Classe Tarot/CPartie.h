@@ -5,9 +5,11 @@ class CPartie
 {
 private:
 	int NBDonnes;
-	CJoueur * lesJoueur[4];//agrégation des joueur de la Partie
-	CDonne ** lesDonnes;//Composition des Donnes de la Partie
+	CJoueur * lesJoueurs[4]; 
+	CDonne ** lesDonnes;
 public:
 	CPartie(CJoueur*[]);
 	void CreerDonnes(CJoueur *);
+	void SetPreneur(CJoueur *);
+	void SetContrat(Contrat);
 };

@@ -6,6 +6,24 @@ CDonne::CDonne(CJoueur *leDonneur)
 	this->leDonneur = leDonneur;
 }
 
+void CDonne::SetPreneur(CJoueur * Preneur)
+{
+	lePreneur = Preneur;
+}
+
+void CDonne::SetDefenseur(CJoueur * Defenseurs[])
+{
+	for (int i = 0; i < 3; i++)
+	{
+		lesDefenseurs[i] = Defenseurs[i];
+	}
+}
+
+void CDonne::SetContrat(Contrat Contrats)
+{
+	typeContrat = Contrats;
+}
+
 void CDonne::CalculPoints()
 {
 	int Bouts[4] = { 56,51,41,36 };
