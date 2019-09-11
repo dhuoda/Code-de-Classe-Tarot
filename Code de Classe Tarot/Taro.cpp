@@ -9,5 +9,10 @@
 
 int main()
 {
-
+	IHM test;
+	test.SaisirJoueurs();
+	test.CreerPartie();
+	test.CreerDonnes(2);
+	test.SaisirLePreneur();
+	test.SaisirContrat();
 }

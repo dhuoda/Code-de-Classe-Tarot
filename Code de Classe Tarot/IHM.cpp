@@ -47,6 +47,11 @@ void IHM::CreerPartie()
 	laPartie = new CPartie(lesJoueurs);
 }
 
+void IHM::CreerDonnes(int numDonneur)
+{
+	laPartie->CreerDonnes(lesJoueurs[numDonneur - 1]);
+}
+
 void IHM::SaisirLePreneur()
 {
 	int NBPreneur;
@@ -60,6 +65,7 @@ void IHM::SaisirContrat()
 	int nomContrat;
 	cout << "0.Passe\n 1.Prise\n 2.Garde\n 3.Garde Sans\n 4.Garde Avec\n Saisir le numéro du contrat :\n";
 	cin >> nomContrat;
+	
 	
 }
 
