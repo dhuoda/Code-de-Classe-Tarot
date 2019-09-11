@@ -69,3 +69,8 @@ void IHM::SaisirContrat()
 	
 }
 
+void IHM::CalculPoints()
+{
+
+}
+

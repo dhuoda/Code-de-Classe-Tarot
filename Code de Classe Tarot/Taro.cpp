@@ -15,4 +15,5 @@ int main()
 	test.CreerDonnes(2);
 	test.SaisirLePreneur();
 	test.SaisirContrat();
+	
 }
