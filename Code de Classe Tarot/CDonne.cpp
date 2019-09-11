@@ -8,4 +8,5 @@ CDonne::CDonne(CJoueur *leDonneur)
 
 CDonne::~CDonne()
 {
+
 }

@@ -4,6 +4,7 @@
 class CPartie
 {
 private:
+	int NBDonnes;
 	CJoueur * lesJoueur[4];//agrégation des joueur de la Partie
 	CDonne ** lesDonnes;//Composition des Donnes de la Partie
 public:
