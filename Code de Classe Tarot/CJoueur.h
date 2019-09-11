@@ -1,12 +1,5 @@
 #pragma once
-#include "CDonne.h"
-#include "CJoueur.h"
-#include "CPartie.h"
-#include "Ihm.h"
-#include <iostream>
-#include <stdio.h>
-#include <conio.h>
-//#using <System.dll>
+#include <string>
 
 class CJoueur
 {
@@ -15,7 +8,7 @@ private:
 	int score;
 public:
 	CJoueur(std::string,int);
-	std::string ireNom();
-	int ireScore();
-	int majScore();
+	std::string lireNom();
+	int lireScore();
+	int majScore(int);
 };

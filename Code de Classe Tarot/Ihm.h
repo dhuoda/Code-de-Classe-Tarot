@@ -2,7 +2,6 @@
 
 #include "CJoueur.h"
 #include "CPartie.h"
-#include "Ihm.h"
 #include <iostream>
 
 //#using <System.dll>
