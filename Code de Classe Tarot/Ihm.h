@@ -21,6 +21,7 @@ public:
 	void CreerDonnes(int numDonneur);
 	void SaisirLePreneur();//Fonction de Saisie du Preneur
 	void SaisirContrat();//Fonction de Saisie du Contrat
+	void LaPoignee();
 	void ContageDePoint();//Fonction de Calcul de Point
 	void SaisirPoint();//Fonction  de Saisie de Point
 	void SaisirBouts();//Fonction de Saisie de Bouts

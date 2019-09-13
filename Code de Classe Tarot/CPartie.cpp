@@ -53,6 +53,11 @@ void CPartie::SetNombrePoint(int nombre)
 	lesDonnes[NBDonnes - 1]->setNBPoint(nombre);
 }
 
+void CPartie::SetPoignee(Poignee Poignee)
+{
+	lesDonnes[NBDonnes - 1]->SetPoignee(Poignee);
+}
+
 void CPartie::GetCalcul()
 {
 	 lesDonnes[NBDonnes - 1]->CalculPoints();

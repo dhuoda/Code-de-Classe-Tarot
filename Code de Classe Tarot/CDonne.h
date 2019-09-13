@@ -16,6 +16,7 @@ public:
 	void SetPreneur(CJoueur * Preneur);
 	void SetDefenseur(CJoueur * Defenseurs[]);
 	void SetContrat(Contrat Contrats);
+	void SetPoignee(Poignee Poignee);
 	int CalculPoints();
 	void setNBPoint(int);
 	void setNBbouts(int);

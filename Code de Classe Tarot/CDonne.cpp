@@ -25,6 +25,11 @@ void CDonne::SetContrat(Contrat Contrats)//Methode SetContrat de la Classe CDonn
 	typeContrat = Contrats;
 }
 
+void CDonne::SetPoignee(Poignee Poignee)
+{
+	typePoygnee = Poignee;
+}
+
 int CDonne::CalculPoints()//Methode CalculPoint de la Classe CDonne
 {
 	int Bouts[4] = { 56,51,41,36 };

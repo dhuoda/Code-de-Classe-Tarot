@@ -55,7 +55,7 @@ void IHM::CreerDonnes(int numDonneur)
 void IHM::SaisirLePreneur()
 {
 	int NBPreneur;
-	cout << "Saisir le Preneur: \t";
+	cout << " Saisir le Preneur: \t";
 	cin >> NBPreneur;
 	laPartie->SetPreneur(lesJoueurs[NBPreneur]);
 }
@@ -67,6 +67,14 @@ void IHM::SaisirContrat()
 	cin >> nomContrat;
 	laPartie->SetContrat((Contrat)nomContrat);
 	
+}
+
+void IHM::LaPoignee()
+{
+	int ChoixP;
+	cout << endl << " Choisisez La poignee:\n\t 0:Sans \n\t 1:Simple \n\t 2:Double \n\t 3.Triple \n Votre Choix:\t";
+	cin >> ChoixP;
+	laPartie->SetPoignee((Poignee)ChoixP);
 }
 
 void IHM::ContageDePoint()

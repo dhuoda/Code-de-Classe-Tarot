@@ -14,6 +14,7 @@ public:
 	void SetPreneur(CJoueur *);
 	void SetContrat(Contrat);
 	void SetNombrePoint(int);
+	void SetPoignee(Poignee);
 	void GetCalcul();
 	void SetBouts(int);
 };
