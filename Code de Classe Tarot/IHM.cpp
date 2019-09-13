@@ -71,7 +71,7 @@ void IHM::SaisirContrat()
 
 void IHM::ContageDePoint()
 {
-	int 
+	
 }
 
 void IHM::SaisirPoint()

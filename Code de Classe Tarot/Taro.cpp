@@ -16,6 +16,5 @@ int main()
 	test.SaisirLePreneur();
 	test.SaisirContrat();
 	
-	
 	return 0;
 }
