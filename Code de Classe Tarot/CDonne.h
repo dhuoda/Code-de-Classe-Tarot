@@ -17,6 +17,7 @@ public:
 	void SetDefenseur(CJoueur * Defenseurs[]);
 	void SetContrat(Contrat Contrats);
 	void CalculPoints();
+	void setNBPoint(int);
 	~CDonne();
 
 private:

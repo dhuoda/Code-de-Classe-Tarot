@@ -71,14 +71,14 @@ void IHM::SaisirContrat()
 
 void IHM::ContageDePoint()
 {
-	int 
+	int;
 }
 
 void IHM::SaisirPoint()
 {
 	int NombrePoint;
-	cout << "saisir les points/n";
+	cout << endl << "Saisir les points: \t";
 	cin >> NombrePoint;
-	laPartie->;
+	laPartie->SetNombrePoint(NombrePoint);
 }
 
