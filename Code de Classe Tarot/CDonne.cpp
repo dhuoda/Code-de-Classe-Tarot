@@ -45,6 +45,26 @@ int CDonne::CalculPoints()//Methode CalculPoint de la Classe CDonne
 //Le contrat est perdu
 		points = -25 + Resultat;
 	}
+	switch(typePoygnee)
+	{
+		case Sans:
+			int MethodeCalcul = 0;
+			//appel de fonction avec MethodeCalcul en argument
+			break;
+		case Simple:
+			int MethodeCalcul = 20;
+			//appel de fonction avec MethodeCalcul en argument
+			break;
+		case Double:
+			int MethodeCalcul = 30;
+			//appel de fonction avec MethodeCalcul en argument
+			break;
+		case Triple:
+			int MethodeCalcul = 40;
+			//appel de fonction avec MethodeCalcul en argument
+			break;
+	}
+
 	lePreneur->majScore(3 * points);
 	for (int i = 0; i < 3; i++)
 	{
