@@ -19,19 +19,19 @@ void IHM::SaisirJoueurs()
 	string joueur3;
 	string joueur4;
 
-	cout << "Joueur 1" << endl << endl;
+	cout << "Joueur 1: \t";
 	cin >> joueur1;
 	cout << endl;
 
-	cout << "Joueur 2" << endl << endl;
+	cout << "Joueur 2: \t";
 	cin >> joueur2;
 	cout << endl;
 
-	cout << "Joueur 3" << endl << endl;
+	cout << "Joueur 3: \t";
 	cin >> joueur3;
 	cout << endl;
 
-	cout << "Joueur 4" << endl << endl;
+	cout << "Joueur 4: \t";
 	cin >> joueur4;
 	cout << endl;
 	cout << endl;
@@ -55,7 +55,7 @@ void IHM::CreerDonnes(int numDonneur)
 void IHM::SaisirLePreneur()
 {
 	int NBPreneur;
-	cout << "Saisir le Preneur:\n";
+	cout << "Saisir le Preneur: \t";
 	cin >> NBPreneur;
 	laPartie->SetPreneur(lesJoueurs[NBPreneur]);
 }
@@ -63,7 +63,7 @@ void IHM::SaisirLePreneur()
 void IHM::SaisirContrat()
 {
 	int nomContrat;
-	cout << "0.Passe\n 1.Prise\n 2.Garde\n 3.Garde Sans\n 4.Garde Avec\n Saisir le numéro du contrat :\n";
+	cout << "\n\t 0.Passe \n\t 1.Prise \n\t 2.Garde \n\t 3.Garde Sans \n\t 4.Garde Avec \n Saisir le numéro du contrat : \t";
 	cin >> nomContrat;
 	laPartie->SetContrat((Contrat)nomContrat);
 	

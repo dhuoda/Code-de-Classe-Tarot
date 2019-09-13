@@ -13,6 +13,12 @@ CPartie::CPartie(CJoueur * Nom[])
 	NBDonnes = 0;
 }
 
+
+CPartie::~CPartie()
+{
+	delete lesDonnes;
+}
+
 void  CPartie::CreerDonnes(CJoueur * donneur)
 {
 	NBDonnes++;
