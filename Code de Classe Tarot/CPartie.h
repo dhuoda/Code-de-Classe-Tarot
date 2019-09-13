@@ -9,6 +9,7 @@ private:
 	CDonne ** lesDonnes;
 public:
 	CPartie(CJoueur*[]);
+	~CPartie();
 	void CreerDonnes(CJoueur *);
 	void SetPreneur(CJoueur *);
 	void SetContrat(Contrat);
