@@ -24,7 +24,7 @@ void CDonne::SetContrat(Contrat Contrats)
 	typeContrat = Contrats;
 }
 
-void CDonne::CalculPoints()
+int CDonne::CalculPoints()
 {
 	int Bouts[4] = { 56,51,41,36 };
 	int Resultat;
@@ -44,13 +44,17 @@ void CDonne::CalculPoints()
 	{
 		lesDefenseurs[i]->majScore(-points);
 	}
-	
-
+	return points;
 }
 
 void CDonne::setNBPoint(int nombre)
 {
 	nbPoints = nombre;
+}
+
+void CDonne::setNBbouts(int bouts)
+{
+	nbBouts = bouts;
 }
 
 CDonne::~CDonne()

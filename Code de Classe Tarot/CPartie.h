@@ -14,5 +14,6 @@ public:
 	void SetPreneur(CJoueur *);
 	void SetContrat(Contrat);
 	void SetNombrePoint(int);
-	void SetCalcul();
+	void GetCalcul();
+	void SetBouts(int);
 };

@@ -16,6 +16,7 @@ int main()
 	test.SaisirLePreneur();
 	test.SaisirContrat();
 	test.SaisirPoint();
-	
+	test.SaisirBouts();
+	test.ContageDePoint();
 	return 0;
 }

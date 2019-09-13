@@ -71,7 +71,7 @@ void IHM::SaisirContrat()
 
 void IHM::ContageDePoint()
 {
-	int;
+	laPartie->GetCalcul();
 }
 
 void IHM::SaisirPoint()
@@ -80,5 +80,13 @@ void IHM::SaisirPoint()
 	cout << endl << "Saisir les points: \t";
 	cin >> NombrePoint;
 	laPartie->SetNombrePoint(NombrePoint);
+}
+
+void IHM::SaisirBouts()
+{
+	int NBBouts;
+	cout << endl << "Saisir Bouts: \t";
+	cin >> NBBouts;
+	laPartie->SetBouts(NBBouts);
 }
 

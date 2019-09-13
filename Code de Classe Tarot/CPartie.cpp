@@ -53,7 +53,12 @@ void CPartie::SetNombrePoint(int nombre)
 	lesDonnes[NBDonnes - 1]->setNBPoint(nombre);
 }
 
-void CPartie::SetCalcul()
+void CPartie::GetCalcul()
 {
-	lesDonnes[NBDonnes - 1]->CalculPoints();
+	 lesDonnes[NBDonnes - 1]->CalculPoints();
+}
+
+void CPartie::SetBouts(int nbBouts)
+{
+	lesDonnes[NBDonnes - 1]->setNBbouts(nbBouts);
 }

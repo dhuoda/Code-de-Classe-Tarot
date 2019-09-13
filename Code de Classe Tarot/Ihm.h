@@ -23,4 +23,5 @@ public:
 	void SaisirContrat();
 	void ContageDePoint();
 	void SaisirPoint();
+	void SaisirBouts();
 };
