@@ -13,5 +13,6 @@ public:
 	void CreerDonnes(CJoueur *);
 	void SetPreneur(CJoueur *);
 	void SetContrat(Contrat);
+	void SetNombrePoint(int);
 	void SetCalcul();
 };

@@ -48,6 +48,11 @@ void CPartie::SetContrat(Contrat Contrats)
 	lesDonnes[NBDonnes - 1]->SetContrat(Contrats);
 }
 
+void CPartie::SetNombrePoint(int nombre)
+{
+	lesDonnes[NBDonnes - 1]->setNBPoint(nombre);
+}
+
 void CPartie::SetCalcul()
 {
 	lesDonnes[NBDonnes - 1]->CalculPoints();

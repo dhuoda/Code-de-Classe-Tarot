@@ -48,6 +48,11 @@ void CDonne::CalculPoints()
 
 }
 
+void CDonne::setNBPoint(int nombre)
+{
+	nbPoints = nombre;
+}
+
 CDonne::~CDonne()
 {
 
