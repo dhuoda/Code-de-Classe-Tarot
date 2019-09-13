@@ -72,7 +72,7 @@ void IHM::SaisirContrat()
 void IHM::ContageDePoint()
 {
 	laPartie->GetCalcul();
-}
+ }
 
 void IHM::SaisirPoint()
 {
