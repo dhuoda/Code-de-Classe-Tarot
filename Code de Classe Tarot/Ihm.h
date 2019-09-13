@@ -21,4 +21,6 @@ public:
 	void CreerDonnes(int numDonneur);
 	void SaisirLePreneur();//Fonction de Saisie du Preneur
 	void SaisirContrat();
+	void ContageDePoint();
+	void SaisirPoint();
 };

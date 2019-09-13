@@ -69,3 +69,16 @@ void IHM::SaisirContrat()
 	
 }
 
+void IHM::ContageDePoint()
+{
+	int 
+}
+
+void IHM::SaisirPoint()
+{
+	int NombrePoint;
+	cout << "saisir les points/n";
+	cin >> NombrePoint;
+	laPartie->;
+}
+

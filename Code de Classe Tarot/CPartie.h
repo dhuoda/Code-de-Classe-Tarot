@@ -12,4 +12,5 @@ public:
 	void CreerDonnes(CJoueur *);
 	void SetPreneur(CJoueur *);
 	void SetContrat(Contrat);
+	void SetCalcul();
 };
