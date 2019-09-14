@@ -30,47 +30,50 @@ void CDonne::SetPoignee(Poignee Poignee)
 	typePoygnee = Poignee;
 }
 
-int CDonne::CalculPoints()//Methode CalculPoint de la Classe CDonne
+void CDonne::CalculPoints()//Methode CalculPoint de la Classe CDonne (change en void a remettre en int si probleme)
+{
+	int MethodeCalcul;
+	switch(typePoygnee)
+	{
+		case Sans:
+			MethodeCalcul = 0;
+			Calcul(MethodeCalcul);
+			break;
+		case Simple:
+			MethodeCalcul = 20;
+			Calcul(MethodeCalcul);
+			break;
+		case Double:
+			MethodeCalcul = 30;
+			Calcul(MethodeCalcul);
+			break;
+		case Triple:
+			MethodeCalcul = 40;
+			Calcul(MethodeCalcul);
+			break;
+	}
+}
+
+void CDonne::Calcul(int PointsPoignee) //le resultat est bizare pourquoi on enleve des points qui devrait etre gagnees par celui qui emporte la manche ? 
 {
 	int Bouts[4] = { 56,51,41,36 };
 	int Resultat;
 	Resultat = nbPoints - Bouts[nbBouts];
 	if (Resultat >= 0)
 	{
-	//Le contrat est gagné 
+		//Le contrat est gagné 
 		points = 25 + Resultat;
 	}
 	else
 	{
-//Le contrat est perdu
+		//Le contrat est perdu
 		points = -25 + Resultat;
 	}
-	switch(typePoygnee)
-	{
-		case Sans:
-			int MethodeCalcul = 0;
-			//appel de fonction avec MethodeCalcul en argument
-			break;
-		case Simple:
-			int MethodeCalcul = 20;
-			//appel de fonction avec MethodeCalcul en argument
-			break;
-		case Double:
-			int MethodeCalcul = 30;
-			//appel de fonction avec MethodeCalcul en argument
-			break;
-		case Triple:
-			int MethodeCalcul = 40;
-			//appel de fonction avec MethodeCalcul en argument
-			break;
-	}
-
-	lePreneur->majScore(3 * points);
+	lePreneur->majScore(3 * points + PointsPoignee);
 	for (int i = 0; i < 3; i++)
 	{
-		lesDefenseurs[i]->majScore(-points);
+		lesDefenseurs[i]->majScore(-points - PointsPoignee);
 	}
-	return points;
 }
 
 void CDonne::setNBPoint(int nombre)//Methode SetNBPoint de la Classe CDonne

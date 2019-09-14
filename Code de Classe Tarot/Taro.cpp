@@ -20,4 +20,5 @@ int main()
 	test.SaisirBouts();
 	test.ContageDePoint();
 	return 0;
+
 }
