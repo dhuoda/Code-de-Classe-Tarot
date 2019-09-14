@@ -30,7 +30,7 @@ void CDonne::SetPoignee(Poignee Poignee)
 	typePoygnee = Poignee;
 }
 
-void CDonne::CalculPoints()//Methode CalculPoint de la Classe CDonne (change en void a remettre en int si probleme)
+void CDonne::CalculPoints()//Methode CalculPoint de la Classe CDonne 
 {
 	int MethodeCalcul;
 	switch(typePoygnee)
