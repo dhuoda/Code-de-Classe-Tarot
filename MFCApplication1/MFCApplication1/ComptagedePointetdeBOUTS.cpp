@@ -13,6 +13,8 @@ IMPLEMENT_DYNAMIC(ComptagedePointetdeBOUTS, CDialogEx)
 
 ComptagedePointetdeBOUTS::ComptagedePointetdeBOUTS(CWnd* pParent /*=NULL*/)
 	: CDialogEx(IDD_COMPTAGEDEPOINTETDEBOUTS, pParent)
+	, NombrePointPreneur(_T(""))
+	, NombreBouts(_T(""))
 {
 
 }
@@ -24,6 +26,8 @@ ComptagedePointetdeBOUTS::~ComptagedePointetdeBOUTS()
 void ComptagedePointetdeBOUTS::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Text(pDX, IDC_EDIT1, NombrePointPreneur);
+	DDX_Text(pDX, IDC_EDIT2, NombreBouts);
 }
 
 
