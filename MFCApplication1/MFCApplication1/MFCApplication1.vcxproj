@@ -185,23 +185,31 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Annonces.h" />
     <ClInclude Include="CDonne.h" />
     <ClInclude Include="CJoueur.h" />
     <ClInclude Include="ComptagedePointetdeBOUTS.h" />
     <ClInclude Include="CPartie.h" />
     <ClInclude Include="MFCApplication1.h" />
     <ClInclude Include="MFCApplication1Dlg.h" />
+    <ClInclude Include="PreneurEtContage.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="resultat.h" />
+    <ClInclude Include="SaisieDeJoueur.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Annonces.cpp" />
     <ClCompile Include="CDonne.cpp" />
     <ClCompile Include="Cjoueur.cpp" />
     <ClCompile Include="ComptagedePointetdeBOUTS.cpp" />
     <ClCompile Include="CPartie.cpp" />
     <ClCompile Include="MFCApplication1.cpp" />
     <ClCompile Include="MFCApplication1Dlg.cpp" />
+    <ClCompile Include="PreneurEtContage.cpp" />
+    <ClCompile Include="resultat.cpp" />
+    <ClCompile Include="SaisieDeJoueur.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
