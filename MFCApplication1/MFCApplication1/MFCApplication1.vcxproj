@@ -187,6 +187,7 @@
   <ItemGroup>
     <ClInclude Include="CDonne.h" />
     <ClInclude Include="CJoueur.h" />
+    <ClInclude Include="ComptagedePointetdeBOUTS.h" />
     <ClInclude Include="CPartie.h" />
     <ClInclude Include="MFCApplication1.h" />
     <ClInclude Include="MFCApplication1Dlg.h" />
@@ -197,6 +198,7 @@
   <ItemGroup>
     <ClCompile Include="CDonne.cpp" />
     <ClCompile Include="Cjoueur.cpp" />
+    <ClCompile Include="ComptagedePointetdeBOUTS.cpp" />
     <ClCompile Include="CPartie.cpp" />
     <ClCompile Include="MFCApplication1.cpp" />
     <ClCompile Include="MFCApplication1Dlg.cpp" />
@@ -219,4 +221,9 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="MFCApplication1.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

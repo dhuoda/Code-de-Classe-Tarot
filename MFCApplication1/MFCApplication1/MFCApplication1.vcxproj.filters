@@ -42,6 +42,9 @@
     <ClInclude Include="CPartie.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="ComptagedePointetdeBOUTS.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MFCApplication1.cpp">
@@ -60,6 +63,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="CPartie.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ComptagedePointetdeBOUTS.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
