@@ -81,6 +81,6 @@ void SaisieDeJoueur::OnBnClickedOk()
 	lesJoueurs[1] = new CJoueur(j2, 0);
 	lesJoueurs[2] = new CJoueur(j3, 0);
 	lesJoueurs[3] = new CJoueur(j4, 0);
-
+	laPartie = new CPartie(lesJoueurs);
 }
 

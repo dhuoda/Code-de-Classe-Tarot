@@ -1,5 +1,6 @@
 #pragma once
 #include "CJoueur.h"
+#include "CPartie.h"
 
 // Boîte de dialogue SaisieDeJoueur
 
@@ -30,5 +31,5 @@ public:
 	afx_msg void OnBnClickedOk();
 private:
 	CJoueur *lesJoueurs[4];
-	
+	CPartie *laPartie;
 };

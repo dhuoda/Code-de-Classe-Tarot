@@ -5,6 +5,7 @@
 #include "stdafx.h"
 #include "MFCApplication1.h"
 #include "MFCApplication1Dlg.h"
+#include "SaisieDeJoueur.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -70,7 +71,9 @@ BOOL CMFCApplication1App::InitInstance()
 	// telles que le nom de votre société ou organisation
 	SetRegistryKey(_T("Applications locales générées par AppWizard"));
 
-	CMFCApplication1Dlg dlg;
+	//CMFCApplication1Dlg dlg;
+	SaisieDeJoueur dlg;
+
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();
 	if (nResponse == IDOK)
