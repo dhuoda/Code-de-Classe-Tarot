@@ -188,7 +188,6 @@
     <ClInclude Include="CDonne.h" />
     <ClInclude Include="CJoueur.h" />
     <ClInclude Include="CPartie.h" />
-    <ClInclude Include="Ihm.h" />
     <ClInclude Include="MFCApplication1.h" />
     <ClInclude Include="MFCApplication1Dlg.h" />
     <ClInclude Include="Resource.h" />
@@ -199,7 +198,6 @@
     <ClCompile Include="CDonne.cpp" />
     <ClCompile Include="Cjoueur.cpp" />
     <ClCompile Include="CPartie.cpp" />
-    <ClCompile Include="IHM.cpp" />
     <ClCompile Include="MFCApplication1.cpp" />
     <ClCompile Include="MFCApplication1Dlg.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -208,7 +206,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Taro.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MFCApplication1.rc" />
