@@ -5,6 +5,10 @@
 #include "MFCApplication1.h"
 #include "SaisieDeJoueur.h"
 #include "afxdialogex.h"
+#include "PreneurEtContage.h"
+#include "Annonces.h"
+#include "ComptagedePointetdeBOUTS.h"
+#include "resultat.h"
 
 
 // Boîte de dialogue SaisieDeJoueur
@@ -40,6 +44,7 @@ BEGIN_MESSAGE_MAP(SaisieDeJoueur, CDialogEx)
 	ON_EN_CHANGE(IDC_EDIT1, &SaisieDeJoueur::OnEnChangeEdit1)
 	ON_BN_CLICKED(IDOK, &SaisieDeJoueur::OnBnClickedOk)
 	ON_EN_CHANGE(IDC_EDIT3, &SaisieDeJoueur::OnEnChangeEdit3)
+	ON_EN_CHANGE(IDC_EDIT2, &SaisieDeJoueur::OnEnChangeEdit2)
 END_MESSAGE_MAP()
 
 
@@ -83,9 +88,29 @@ void SaisieDeJoueur::OnBnClickedOk()
 	lesJoueurs[3] = new CJoueur(j4, 0);
 	laPartie = new CPartie(lesJoueurs);
 	UpdateData(false);
+
+	PreneurEtContage Preneurf(this);
+	Preneurf.DoModal();
+	Annonces annonce(this);
+	annonce.DoModal();
+	ComptagedePointetdeBOUTS CPB(this);
+	CPB.DoModal();
+	resultat resu(this);
+	resu.DoModal();
 	CDialogEx::OnOK();
+
 }
 
+
+void SaisieDeJoueur::OnEnChangeEdit2()
+{
+	// TODO:  S'il s'agit d'un contrôle RICHEDIT, le contrôle ne
+	// envoyez cette notification sauf si vous substituez CDialogEx::OnInitDialog()
+	// fonction et appelle CRichEditCtrl().SetEventMask()
+	// avec l'indicateur ENM_CHANGE ajouté au masque grâce à l'opérateur OR.
+
+	// TODO:  Ajoutez ici le code de votre gestionnaire de notification de contrôle
+}
 
 
 
@@ -98,3 +123,5 @@ void SaisieDeJoueur::OnEnChangeEdit3()
 
 	// TODO:  Ajoutez ici le code de votre gestionnaire de notification de contrôle
 }
+
+

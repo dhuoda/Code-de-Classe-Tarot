@@ -34,4 +34,5 @@ private:
 	CPartie *laPartie;
 public:
 	afx_msg void OnEnChangeEdit3();
+	afx_msg void OnEnChangeEdit2();
 };
