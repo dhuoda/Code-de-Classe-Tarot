@@ -13,7 +13,7 @@
 
 IMPLEMENT_DYNAMIC(Annonces, CDialogEx)
 
-Annonces::Annonces(CWnd* pParent /*=NULL*/)
+Annonces::Annonces( CWnd* pParent /*=NULL*/)
 	: CDialogEx(IDD_ANNONCES, pParent)
 {
 
@@ -41,6 +41,14 @@ void Annonces::OnBnClickedOk()
 {
 	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
 	CDialogEx::OnOK();
+	laPartie->SetPoignee((Poignee)m_CB_Poignee.GetCurSel());
 	ComptagedePointetdeBOUTS CPB(this);
 	CPB.DoModal();
 }
+
+
+void Annonces::OnCbnSelchangeCombo1()
+{
+	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
+}
+

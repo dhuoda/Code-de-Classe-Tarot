@@ -1,5 +1,6 @@
 #pragma once
-
+#include "CPartie.h"
+#include "CJoueur.h"
 
 // Boîte de dialogue Annonces
 
@@ -20,6 +21,12 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // Prise en charge de DDX/DDV
 
 	DECLARE_MESSAGE_MAP()
+
 public:
 	afx_msg void OnBnClickedOk();
+	afx_msg void OnCbnSelchangeCombo1();
+	CComboBox m_CB_Poignee;
+private:
+	CPartie *laPartie;
 };
+
