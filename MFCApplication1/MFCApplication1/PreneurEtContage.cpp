@@ -34,17 +34,14 @@ void PreneurEtContage::DoDataExchange(CDataExchange* pDX)
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Text(pDX, IDC_EDIT1, NumPreneur);
 	DDX_Text(pDX, IDC_ST_Donneur, m_Donneur);
+	DDX_Control(pDX, IDC_COMBO1, m_CB_Contrat);
 }
 
 
 BEGIN_MESSAGE_MAP(PreneurEtContage, CDialogEx)
 	ON_EN_CHANGE(IDC_EDIT1, &PreneurEtContage::OnEnChangeEdit1)
 	ON_BN_CLICKED(IDOK, &PreneurEtContage::OnBnClickedOk)
-	ON_BN_CLICKED(IDC_RADIO1, &PreneurEtContage::OnBnClickedRadio1)
-	ON_BN_CLICKED(IDC_RADIO2, &PreneurEtContage::OnBnClickedRadio2)
-	ON_BN_CLICKED(IDC_RADIO3, &PreneurEtContage::OnBnClickedRadio3)
-	ON_BN_CLICKED(IDC_RADIO4, &PreneurEtContage::OnBnClickedRadio4)
-	ON_BN_CLICKED(IDC_RADIO5, &PreneurEtContage::OnBnClickedRadio5)
+	ON_CBN_SELCHANGE(IDC_COMBO1, &PreneurEtContage::OnCbnSelchangeCombo1)
 END_MESSAGE_MAP()
 
 
@@ -65,37 +62,16 @@ void PreneurEtContage::OnEnChangeEdit1()
 void PreneurEtContage::OnBnClickedOk()
 {
 	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
-	//CDialogEx::OnOK();
+	CDialogEx::OnOK();
 	UpdateData(true);
 	laPartie->SetPreneur(lesJoueurs[NumPreneur]);
+	//GetCursel() sert a recuperer l'index de la selection 
+	laPartie->SetContrat((Contrat)m_CB_Contrat.GetCurSel());
+
 }
 
 
-void PreneurEtContage::OnBnClickedRadio1()
+void PreneurEtContage::OnCbnSelchangeCombo1()
 {
-	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
-}
 
-
-void PreneurEtContage::OnBnClickedRadio2()
-{
-	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
-}
-
-
-void PreneurEtContage::OnBnClickedRadio3()
-{
-	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
-}
-
-
-void PreneurEtContage::OnBnClickedRadio4()
-{
-	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
-}
-
-
-void PreneurEtContage::OnBnClickedRadio5()
-{
-	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
 }

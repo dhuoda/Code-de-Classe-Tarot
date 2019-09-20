@@ -1,6 +1,7 @@
 #pragma once
 #include "CJoueur.h"
 #include "CPartie.h"
+#include "afxwin.h"
 
 
 // Boîte de dialogue PreneurEtContage
@@ -26,14 +27,11 @@ public:
 	int NumPreneur;
 	afx_msg void OnEnChangeEdit1();
 	afx_msg void OnBnClickedOk();
-	afx_msg void OnBnClickedRadio1();
-	afx_msg void OnBnClickedRadio2();
-	afx_msg void OnBnClickedRadio3();
-	afx_msg void OnBnClickedRadio4();
-	afx_msg void OnBnClickedRadio5();
 private:
 	CJoueur *lesJoueurs[4];
 	CPartie *laPartie;
 public:
 	CString m_Donneur;
+	afx_msg void OnCbnSelchangeCombo1();
+	CComboBox m_CB_Contrat;
 };
