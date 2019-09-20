@@ -5,6 +5,7 @@
 #include "MFCApplication1.h"
 #include "PreneurEtContage.h"
 #include "afxdialogex.h"
+#include "Annonces.h"
 
 
 // Boîte de dialogue PreneurEtContage
@@ -67,6 +68,10 @@ void PreneurEtContage::OnBnClickedOk()
 	laPartie->SetPreneur(lesJoueurs[NumPreneur]);
 	//GetCursel() sert a recuperer l'index de la selection 
 	laPartie->SetContrat((Contrat)m_CB_Contrat.GetCurSel());
+	Annonces annonce(this);
+	annonce.DoModal();
+}
+
 
 }
 

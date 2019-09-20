@@ -6,9 +6,6 @@
 #include "SaisieDeJoueur.h"
 #include "afxdialogex.h"
 #include "PreneurEtContage.h"
-#include "Annonces.h"
-#include "ComptagedePointetdeBOUTS.h"
-#include "resultat.h"
 
 
 // Boîte de dialogue SaisieDeJoueur
@@ -89,16 +86,9 @@ void SaisieDeJoueur::OnBnClickedOk()
 	lesJoueurs[3] = new CJoueur(j4, 0);
 	laPartie = new CPartie(lesJoueurs);
 	UpdateData(false);
-
+	CDialogEx::OnOK();
 	PreneurEtContage Preneurf(lesJoueurs,laPartie,this);
 	Preneurf.DoModal();
-	Annonces annonce(this);
-	annonce.DoModal();
-	ComptagedePointetdeBOUTS CPB(this);
-	CPB.DoModal();
-	resultat resu(this);
-	resu.DoModal();
-	CDialogEx::OnOK();
 
 }
 

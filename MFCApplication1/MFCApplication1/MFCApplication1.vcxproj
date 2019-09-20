@@ -191,7 +191,6 @@
     <ClInclude Include="ComptagedePointetdeBOUTS.h" />
     <ClInclude Include="CPartie.h" />
     <ClInclude Include="MFCApplication1.h" />
-    <ClInclude Include="MFCApplication1Dlg.h" />
     <ClInclude Include="PreneurEtContage.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="resultat.h" />
@@ -206,7 +205,6 @@
     <ClCompile Include="ComptagedePointetdeBOUTS.cpp" />
     <ClCompile Include="CPartie.cpp" />
     <ClCompile Include="MFCApplication1.cpp" />
-    <ClCompile Include="MFCApplication1Dlg.cpp" />
     <ClCompile Include="PreneurEtContage.cpp" />
     <ClCompile Include="resultat.cpp" />
     <ClCompile Include="SaisieDeJoueur.cpp" />

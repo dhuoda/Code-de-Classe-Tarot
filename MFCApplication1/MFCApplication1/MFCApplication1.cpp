@@ -4,7 +4,6 @@
 
 #include "stdafx.h"
 #include "MFCApplication1.h"
-#include "MFCApplication1Dlg.h"
 #include "SaisieDeJoueur.h"
 #include "PreneurEtContage.h"
 

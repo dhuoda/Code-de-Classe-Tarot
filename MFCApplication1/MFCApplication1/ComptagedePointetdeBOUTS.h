@@ -23,4 +23,5 @@ protected:
 public:
 	CString NombrePointPreneur;
 	CString NombreBouts;
+	afx_msg void OnBnClickedOk();
 };
