@@ -5,6 +5,7 @@
 #include "MFCApplication1.h"
 #include "SaisieDeJoueur.h"
 #include "afxdialogex.h"
+#include "PreneurEtContage.h"
 
 
 // Boîte de dialogue SaisieDeJoueur
@@ -70,7 +71,7 @@ void SaisieDeJoueur::OnEnChangeEdit1()
 void SaisieDeJoueur::OnBnClickedOk()
 {
 	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
-	//CDialogEx::OnOK();
+	CDialogEx::OnOK();
 	UpdateData(true);
 	std::string j1 = (CStringA)NomJoueur1.GetBuffer();
 	std::string j2 = (CStringA)NomJoueur2.GetBuffer();
@@ -82,7 +83,10 @@ void SaisieDeJoueur::OnBnClickedOk()
 	lesJoueurs[2] = new CJoueur(j3, 0);
 	lesJoueurs[3] = new CJoueur(j4, 0);
 	laPartie = new CPartie(lesJoueurs);
-	UpdateData(false);
+
+	//on creer la fenetre preneuretcontage et on l'execute en mode Modal
+	PreneurEtContage Fpreneur(lesJoueurs,laPartie,this);
+	Fpreneur.DoModal();
 }
 
 

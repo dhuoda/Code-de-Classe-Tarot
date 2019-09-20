@@ -6,6 +6,7 @@
 #include "MFCApplication1.h"
 #include "MFCApplication1Dlg.h"
 #include "SaisieDeJoueur.h"
+#include "PreneurEtContage.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -72,7 +73,7 @@ BOOL CMFCApplication1App::InitInstance()
 	SetRegistryKey(_T("Applications locales générées par AppWizard"));
 
 	//CMFCApplication1Dlg dlg;
-	SaisieDeJoueur dlg;
+   SaisieDeJoueur dlg;
 
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();
