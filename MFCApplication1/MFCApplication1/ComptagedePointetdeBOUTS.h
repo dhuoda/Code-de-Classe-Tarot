@@ -20,4 +20,7 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // Prise en charge de DDX/DDV
 
 	DECLARE_MESSAGE_MAP()
+public:
+	CString NombrePointPreneur;
+	CString NombreBouts;
 };
