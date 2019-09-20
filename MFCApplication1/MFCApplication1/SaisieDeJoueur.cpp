@@ -90,7 +90,7 @@ void SaisieDeJoueur::OnBnClickedOk()
 	laPartie = new CPartie(lesJoueurs);
 	UpdateData(false);
 
-	PreneurEtContage Preneurf(this);
+	PreneurEtContage Preneurf(lesJoueurs,laPartie,this);
 	Preneurf.DoModal();
 	Annonces annonce(this);
 	annonce.DoModal();
