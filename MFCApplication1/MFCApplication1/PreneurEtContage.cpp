@@ -69,10 +69,9 @@ void PreneurEtContage::OnBnClickedOk()
 	CDialogEx::OnOK();
 	UpdateData(true);
 	laPartie->SetPreneur(lesJoueurs[NumPreneur]);
+	CDialogEx::OnOK();
 	Annonces annonce(this);
 	annonce.DoModal();
-	CDialogEx::OnOK();
-
 }
 
 

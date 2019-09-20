@@ -86,10 +86,9 @@ void SaisieDeJoueur::OnBnClickedOk()
 	lesJoueurs[3] = new CJoueur(j4, 0);
 	laPartie = new CPartie(lesJoueurs);
 	UpdateData(false);
-
+	CDialogEx::OnOK();
 	PreneurEtContage Preneurf(lesJoueurs,laPartie,this);
 	Preneurf.DoModal();
-	CDialogEx::OnOK();
 
 }
 
