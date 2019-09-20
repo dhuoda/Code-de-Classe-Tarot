@@ -32,4 +32,6 @@ public:
 private:
 	CJoueur *lesJoueurs[4];
 	CPartie *laPartie;
+public:
+	afx_msg void OnEnChangeEdit3();
 };
