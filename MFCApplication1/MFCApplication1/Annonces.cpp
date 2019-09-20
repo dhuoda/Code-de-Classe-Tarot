@@ -5,6 +5,8 @@
 #include "MFCApplication1.h"
 #include "Annonces.h"
 #include "afxdialogex.h"
+#include "ComptagedePointetdeBOUTS.h"
+
 
 
 // Boîte de dialogue Annonces
@@ -28,7 +30,17 @@ void Annonces::DoDataExchange(CDataExchange* pDX)
 
 
 BEGIN_MESSAGE_MAP(Annonces, CDialogEx)
+	ON_BN_CLICKED(IDOK, &Annonces::OnBnClickedOk)
 END_MESSAGE_MAP()
 
 
 // Gestionnaires de messages de Annonces
+
+
+void Annonces::OnBnClickedOk()
+{
+	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
+	ComptagedePointetdeBOUTS CPB(this);
+	CPB.DoModal();
+	CDialogEx::OnOK();
+}

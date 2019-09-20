@@ -5,6 +5,7 @@
 #include "MFCApplication1.h"
 #include "PreneurEtContage.h"
 #include "afxdialogex.h"
+#include "Annonces.h"
 
 
 // Boîte de dialogue PreneurEtContage
@@ -65,9 +66,13 @@ void PreneurEtContage::OnEnChangeEdit1()
 void PreneurEtContage::OnBnClickedOk()
 {
 	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
-	//CDialogEx::OnOK();
+	CDialogEx::OnOK();
 	UpdateData(true);
 	laPartie->SetPreneur(lesJoueurs[NumPreneur]);
+	Annonces annonce(this);
+	annonce.DoModal();
+	CDialogEx::OnOK();
+
 }
 
 
