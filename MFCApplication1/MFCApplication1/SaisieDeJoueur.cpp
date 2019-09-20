@@ -72,15 +72,17 @@ void SaisieDeJoueur::OnBnClickedOk()
 	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
 	//CDialogEx::OnOK();
 	UpdateData(true);
-	std::string j1 =(CStringA) NomJoueur1.GetBuffer();
-	std::string j2 = (CStringA)NomJoueur1.GetBuffer();
-	std::string j3 = (CStringA)NomJoueur1.GetBuffer();
-	std::string j4 = (CStringA)NomJoueur1.GetBuffer();
+	std::string j1 = (CStringA)NomJoueur1.GetBuffer();
+	std::string j2 = (CStringA)NomJoueur2.GetBuffer();
+	std::string j3 = (CStringA)NomJoueur3.GetBuffer();
+	std::string j4 = (CStringA)NomJoueur4.GetBuffer();
 
 	lesJoueurs[0] = new CJoueur(j1, 0);
 	lesJoueurs[1] = new CJoueur(j2, 0);
 	lesJoueurs[2] = new CJoueur(j3, 0);
 	lesJoueurs[3] = new CJoueur(j4, 0);
 	laPartie = new CPartie(lesJoueurs);
+	UpdateData(false);
 }
+
 
