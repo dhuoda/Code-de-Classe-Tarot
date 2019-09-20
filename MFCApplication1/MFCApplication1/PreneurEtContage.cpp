@@ -73,9 +73,6 @@ void PreneurEtContage::OnBnClickedOk()
 }
 
 
-}
-
-
 void PreneurEtContage::OnCbnSelchangeCombo1()
 {
 
