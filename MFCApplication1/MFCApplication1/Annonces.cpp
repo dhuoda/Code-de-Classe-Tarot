@@ -13,10 +13,10 @@
 
 IMPLEMENT_DYNAMIC(Annonces, CDialogEx)
 
-Annonces::Annonces( CWnd* pParent /*=NULL*/)
+Annonces::Annonces(CPartie * Lapartie,CWnd* pParent /*=NULL*/)
 	: CDialogEx(IDD_ANNONCES, pParent)
 {
-
+	laPartie = Lapartie;
 }
 
 Annonces::~Annonces()
@@ -26,6 +26,7 @@ Annonces::~Annonces()
 void Annonces::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_COMBO1, typePoignee);
 }
 
 
@@ -41,7 +42,8 @@ void Annonces::OnBnClickedOk()
 {
 	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
 	CDialogEx::OnOK();
-	laPartie->SetPoignee((Poignee)m_CB_Poignee.GetCurSel());
+	UpdateData(true);
+	laPartie->SetPoignee((Poignee)typePoignee.GetCurSel());
 	ComptagedePointetdeBOUTS CPB(this);
 	CPB.DoModal();
 }

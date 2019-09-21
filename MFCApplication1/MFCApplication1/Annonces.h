@@ -1,6 +1,7 @@
 #pragma once
 #include "CPartie.h"
 #include "CJoueur.h"
+#include "afxwin.h"
 
 // Boîte de dialogue Annonces
 
@@ -9,7 +10,7 @@ class Annonces : public CDialogEx
 	DECLARE_DYNAMIC(Annonces)
 
 public:
-	Annonces(CWnd* pParent = NULL);   // constructeur standard
+	Annonces(CPartie *, CWnd* pParent = NULL);   // constructeur standard
 	virtual ~Annonces();
 
 // Données de boîte de dialogue
@@ -25,8 +26,9 @@ protected:
 public:
 	afx_msg void OnBnClickedOk();
 	afx_msg void OnCbnSelchangeCombo1();
-	CComboBox m_CB_Poignee;
 private:
 	CPartie *laPartie;
+public:
+	CComboBox typePoignee;
 };
 
