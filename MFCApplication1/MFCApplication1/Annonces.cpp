@@ -40,7 +40,6 @@ END_MESSAGE_MAP()
 
 void Annonces::OnBnClickedOk()
 {
-	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
 	CDialogEx::OnOK();
 	UpdateData(true);
 	laPartie->SetPoignee((Poignee)typePoignee.GetCurSel());

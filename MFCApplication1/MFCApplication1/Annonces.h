@@ -12,6 +12,9 @@ class Annonces : public CDialogEx
 public:
 	Annonces(CPartie *, CWnd* pParent = NULL);   // constructeur standard
 	virtual ~Annonces();
+	afx_msg void OnBnClickedOk();
+	afx_msg void OnCbnSelchangeCombo1();
+	CComboBox typePoignee;
 
 // Données de boîte de dialogue
 #ifdef AFX_DESIGN_TIME
@@ -23,12 +26,8 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 
-public:
-	afx_msg void OnBnClickedOk();
-	afx_msg void OnCbnSelchangeCombo1();
 private:
 	CPartie *laPartie;
-public:
-	CComboBox typePoignee;
+
 };
 
