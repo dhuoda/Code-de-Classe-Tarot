@@ -13,10 +13,14 @@
 
 IMPLEMENT_DYNAMIC(Annonces, CDialogEx)
 
-Annonces::Annonces(CPartie * Lapartie,CWnd* pParent /*=NULL*/)
+Annonces::Annonces(CJoueur *Jouer[], CPartie * Lapartie, CWnd* pParent /*=NULL*/)
 	: CDialogEx(IDD_ANNONCES, pParent)
 {
 	laPartie = Lapartie;
+	for (int i = 0; i < 4; i++)
+	{
+		lesJoueurs[i] = Jouer[i];
+	}
 }
 
 Annonces::~Annonces()
@@ -43,7 +47,7 @@ void Annonces::OnBnClickedOk()
 	CDialogEx::OnOK();
 	UpdateData(true);
 	laPartie->SetPoignee((Poignee)typePoignee.GetCurSel());
-	ComptagedePointetdeBOUTS CPB(this);
+	ComptagedePointetdeBOUTS CPB(lesJoueurs, laPartie, this);
 	CPB.DoModal();
 }
 

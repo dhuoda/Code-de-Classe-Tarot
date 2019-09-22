@@ -10,7 +10,7 @@ class Annonces : public CDialogEx
 	DECLARE_DYNAMIC(Annonces)
 
 public:
-	Annonces(CPartie *, CWnd* pParent = NULL);   // constructeur standard
+	Annonces(CJoueur *[], CPartie *, CWnd* pParent = NULL);   // constructeur standard
 	virtual ~Annonces();
 	afx_msg void OnBnClickedOk();
 	afx_msg void OnCbnSelchangeCombo1();
@@ -27,7 +27,7 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 private:
+	CJoueur *lesJoueurs[4];
 	CPartie *laPartie;
-
 };
 
