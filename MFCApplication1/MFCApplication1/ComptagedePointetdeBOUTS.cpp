@@ -14,8 +14,8 @@ IMPLEMENT_DYNAMIC(ComptagedePointetdeBOUTS, CDialogEx)
 
 ComptagedePointetdeBOUTS::ComptagedePointetdeBOUTS(CJoueur *Jouer[], CPartie * Lapartie, CWnd* pParent /*=NULL*/)
 	: CDialogEx(IDD_COMPTAGEDEPOINTETDEBOUTS, pParent)
-	, NombrePointPreneur(_T(""))
-	, NombreBouts(_T(""))
+	, NBPoints(0)
+	, NBBouts(0)
 {
 	laPartie = Lapartie;
 	for (int i = 0; i < 4; i++)
@@ -31,10 +31,8 @@ ComptagedePointetdeBOUTS::~ComptagedePointetdeBOUTS()
 void ComptagedePointetdeBOUTS::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
-	DDX_Text(pDX, IDC_EDIT1, NombrePointPreneur);
-	DDX_Text(pDX, IDC_EDIT2, NombreBouts);
-	DDX_Control(pDX, IDC_EDIT2, NBBouts);
-	DDX_Control(pDX, IDC_EDIT1, NBPoints);
+	DDX_Text(pDX, IDC_EDIT1, NBPoints);
+	DDX_Text(pDX, IDC_EDIT2, NBBouts);
 }
 
 
@@ -51,6 +49,8 @@ void ComptagedePointetdeBOUTS::OnBnClickedOk()
 	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
 	CDialogEx::OnOK();
 	UpdateData(true);
-	resultat resu(this);
+	laPartie->SetNombrePoint(NBPoints);
+	laPartie->SetBouts(NBBouts);
+	resultat resu(lesJoueurs,laPartie,this);
 	resu.DoModal();
 }

@@ -16,8 +16,6 @@ public:
 	CString NombrePointPreneur;
 	CString NombreBouts;
 	afx_msg void OnBnClickedOk();
-	CEdit NBBouts;
-	CEdit NBPoints;
 
 // Données de boîte de dialogue
 #ifdef AFX_DESIGN_TIME
@@ -33,4 +31,7 @@ private:
 	CJoueur *lesJoueurs[4];
 	CPartie *laPartie;
 	
+public:
+	int NBPoints;
+	int NBBouts;
 };
