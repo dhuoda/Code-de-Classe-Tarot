@@ -51,6 +51,7 @@ void ComptagedePointetdeBOUTS::OnBnClickedOk()
 	UpdateData(true);
 	laPartie->SetNombrePoint(NBPoints);
 	laPartie->SetBouts(NBBouts);
+	laPartie->GetCalcul();
 	resultat resu(lesJoueurs,laPartie,this);
 	resu.DoModal();
 }

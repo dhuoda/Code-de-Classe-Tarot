@@ -36,7 +36,4 @@ void resultat::OnBnClickedOk()
 {
 	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
 	CDialogEx::OnOK();
-	UpdateData(true);
-	laPartie->GetCalcul();
-	UpdateData(false);
 }
