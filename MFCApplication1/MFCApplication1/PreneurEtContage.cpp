@@ -43,6 +43,7 @@ BEGIN_MESSAGE_MAP(PreneurEtContage, CDialogEx)
 	ON_EN_CHANGE(IDC_EDIT1, &PreneurEtContage::OnEnChangeEdit1)
 	ON_BN_CLICKED(IDOK, &PreneurEtContage::OnBnClickedOk)
 	ON_CBN_SELCHANGE(IDC_COMBO1, &PreneurEtContage::OnCbnSelchangeCombo1)
+	ON_STN_CLICKED(IDC_ST_Donneur, &PreneurEtContage::OnStnClickedStDonneur)
 END_MESSAGE_MAP()
 
 
@@ -76,4 +77,10 @@ void PreneurEtContage::OnBnClickedOk()
 void PreneurEtContage::OnCbnSelchangeCombo1()
 {
 
+}
+
+
+void PreneurEtContage::OnStnClickedStDonneur()
+{
+	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
 }

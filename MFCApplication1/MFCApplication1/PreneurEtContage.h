@@ -33,4 +33,6 @@ protected:
 private:
 	CJoueur *lesJoueurs[4];
 	CPartie *laPartie;
+public:
+	afx_msg void OnStnClickedStDonneur();
 };

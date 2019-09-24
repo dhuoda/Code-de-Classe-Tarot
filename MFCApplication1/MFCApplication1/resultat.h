@@ -12,6 +12,15 @@ class resultat : public CDialogEx
 public:
 	resultat(CJoueur *[], CPartie *, CWnd* pParent = NULL);   // constructeur standard
 	virtual ~resultat();
+	afx_msg void OnBnClickedOk();
+	CString NJ1;
+	int SJ1;
+	CString NJ2;
+	int SJ2;
+	CString NJ3;
+	int SJ3;
+	CString NJ4;
+	int SJ4;
 
 // Données de boîte de dialogue
 #ifdef AFX_DESIGN_TIME
@@ -22,8 +31,7 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // Prise en charge de DDX/DDV
 
 	DECLARE_MESSAGE_MAP()
-public:
-	afx_msg void OnBnClickedOk();
+
 private:
 	CJoueur *lesJoueurs[4];
 	CPartie *laPartie;
