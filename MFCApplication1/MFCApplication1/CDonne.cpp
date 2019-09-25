@@ -70,7 +70,7 @@ void CDonne::Calcul(int PointsPoignee) //le resultat est bizare pourquoi on enle
 		//Le contrat est perdu
 		points = -25 + Resultat;
 	}
-	lePreneur->majScore(3 * points + PointsPoignee);
+	lePreneur->majScore(3 * (points + PointsPoignee));
 	for (int i = 0; i < 3; i++)
 	{
 		lesDefenseurs[i]->majScore(-points - PointsPoignee);

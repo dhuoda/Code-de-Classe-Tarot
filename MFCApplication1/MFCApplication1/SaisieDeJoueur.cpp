@@ -1,5 +1,5 @@
 // SaisieDeJoueur.cpp : fichier d'implémentation
-//
+
 
 #include "stdafx.h"
 #include "MFCApplication1.h"
