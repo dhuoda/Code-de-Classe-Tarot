@@ -5,6 +5,7 @@
 #include "MFCApplication1.h"
 #include "resultat.h"
 #include "afxdialogex.h"
+#include "PreneurEtContage.h"
 
 
 // Boîte de dialogue resultat
@@ -56,6 +57,7 @@ void resultat::DoDataExchange(CDataExchange* pDX)
 
 
 BEGIN_MESSAGE_MAP(resultat, CDialogEx)
+	ON_BN_CLICKED(IDOK, &resultat::OnBnClickedOk)
 END_MESSAGE_MAP()
 
 
@@ -66,5 +68,7 @@ void resultat::OnBnClickedOk()
 	UpdateData(true);
 	CDialogEx::OnOK();
 	UpdateData(false);
+	PreneurEtContage Continuer(lesJoueurs, laPartie, this);
+	Continuer.DoModal();
 
 }
