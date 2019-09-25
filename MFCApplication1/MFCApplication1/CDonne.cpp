@@ -59,7 +59,7 @@ void CDonne::Calcul(int PointsPoignee) //le resultat est bizare pourquoi on enle
 {
 	int Bouts[4] = { 56,51,41,36 };
 	int Resultat;
-	int pointcontrat[4] = { 0,2,4,6 };
+	int pointcontrat[4] = { 1,2,4,6 };
 	Resultat = nbPoints - Bouts[nbBouts];
 	if (Resultat >= 0)
 	{
