@@ -59,6 +59,7 @@ void CDonne::Calcul(int PointsPoignee) //le resultat est bizare pourquoi on enle
 {
 	int Bouts[4] = { 56,51,41,36 };
 	int Resultat;
+	int pointcontrat[4] = { 0,2,4,6 };
 	Resultat = nbPoints - Bouts[nbBouts];
 	if (Resultat >= 0)
 	{
@@ -70,10 +71,10 @@ void CDonne::Calcul(int PointsPoignee) //le resultat est bizare pourquoi on enle
 		//Le contrat est perdu
 		points = -25 + Resultat;
 	}
-	lePreneur->majScore(3 * (points + PointsPoignee));
+	lePreneur->majScore((3 * (points + PointsPoignee))*pointcontrat[typeContrat-1]);
 	for (int i = 0; i < 3; i++)
 	{
-		lesDefenseurs[i]->majScore(-points - PointsPoignee);
+		lesDefenseurs[i]->majScore((-points - PointsPoignee)*pointcontrat[typeContrat-1]);
 	}
 }
 
