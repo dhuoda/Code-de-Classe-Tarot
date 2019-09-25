@@ -70,5 +70,4 @@ void resultat::OnBnClickedOk()
 	UpdateData(false);
 	PreneurEtContage Continuer(lesJoueurs, laPartie, this);
 	Continuer.DoModal();
-
 }

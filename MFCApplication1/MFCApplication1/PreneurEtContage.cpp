@@ -69,6 +69,7 @@ void PreneurEtContage::OnBnClickedOk()
 	laPartie->SetPreneur(lesJoueurs[NumPreneur]);
 	//GetCursel() sert a recuperer l'index de la selection 
 	laPartie->SetContrat((Contrat)m_CB_Contrat.GetCurSel());
+	UpdateData(false);
 	Annonces annonce(lesJoueurs, laPartie, this);
 	annonce.DoModal();
 }
