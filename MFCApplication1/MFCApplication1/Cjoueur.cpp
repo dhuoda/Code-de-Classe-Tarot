@@ -29,3 +29,13 @@ int CJoueur::majScore(int points)
 	score = score + points;
 	return(score);
 }
+
+int CJoueur::majDonneur()
+{
+	leDonneur = leDonneur + 1;
+	if (leDonneur == 4)
+	{
+		leDonneur = 0;
+	}
+	return (leDonneur);
+}

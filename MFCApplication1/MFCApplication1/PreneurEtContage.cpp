@@ -23,7 +23,8 @@ PreneurEtContage::PreneurEtContage(CJoueur *Jouer[],CPartie * Lapartie, CWnd* pP
 		lesJoueurs[i] = Jouer[i];
 	}
 	laPartie->CreerDonnes(lesJoueurs[0]);
-	m_Donneur = lesJoueurs[0]->lireNom().c_str();
+	int x = lesJoueurs[0]->majDonneur();
+	m_Donneur = lesJoueurs[x]->lireNom().c_str();
 }
 
 PreneurEtContage::~PreneurEtContage()
